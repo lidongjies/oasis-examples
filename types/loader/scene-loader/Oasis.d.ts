@@ -1,0 +1,30 @@
+import { Engine, EventDispatcher } from "@oasis-engine/core";
+import { AbilityManager } from "./AbilityManager";
+import { NodeManager } from "./NodeManager";
+import { PluginManager } from "./plugins/PluginManager";
+import { SchemaResourceManager } from "./ResourceManager";
+import { Options, Schema } from "./types";
+export declare class Oasis extends EventDispatcher {
+    private _options;
+    readonly pluginManager: PluginManager;
+    readonly engine: Engine;
+    readonly nodeManager: NodeManager;
+    readonly abilityManager: AbilityManager;
+    resourceManager: SchemaResourceManager;
+    _canvas: HTMLCanvasElement;
+    private schema;
+    timeout: number;
+    private oasis;
+    private constructor();
+    get canvas(): HTMLCanvasElement;
+    get options(): Readonly<Options>;
+    updateConfig(config: Schema): void;
+    private init;
+    private loadResources;
+    private bindResources;
+    private parseEntities;
+    private parseNodeAbilities;
+    private bfsNodes;
+    private attach;
+    static create(options: Options, pluginManager: PluginManager): Promise<Oasis>;
+}

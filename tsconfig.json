@@ -1,0 +1,36 @@
+{
+    "compilerOptions": {
+        "rootDir": ".",
+        "baseUrl": ".",
+        "outDir": "dist",
+        "target": "esnext",
+        "module": "esnext",
+        "moduleResolution": "node",
+        "allowJs": true,
+        "noUnusedLocals": true,
+        "experimentalDecorators": true,
+        "esModuleInterop": true,
+        "removeComments": true,
+        "noEmitHelpers": true,
+        "importHelpers": true,
+        "noImplicitReturns": false,
+        "noUnusedParameters": true,
+        "allowSyntheticDefaultImports": true,
+        "lib": [
+            "esnext",
+            "dom"
+        ],
+        "paths": {
+            "/javascript/lib/oasis/*.js": [
+                "types/*/index.d.ts"
+            ]
+        }
+    },
+    "include": [
+        "types",
+        "javascript"
+    ],
+    "exclude": [
+        "node_modules",
+    ]
+}
