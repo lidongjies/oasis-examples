@@ -28,7 +28,8 @@
     },
     "include": [
         "types",
-        "javascript"
+        "javascript",
+        "examples"
     ],
     "exclude": [
         "node_modules",
